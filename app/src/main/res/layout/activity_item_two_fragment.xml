@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--
+    GridView with 3 value for numColumns attribute
+    -->
+    <GridView
+        android:id="@+id/simpleGridView"
+
+        android:footerDividersEnabled="true"
+        android:padding="1dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e5e5e5"
+
+        android:horizontalSpacing="1dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp"
+        android:layout_below="@+id/os_texts" />
+
+    <TextView
+        android:id="@+id/os_texts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List of Chat Room"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="2dp"/>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
