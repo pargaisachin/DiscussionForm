@@ -5,10 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.util.Date;
 
-/**
- * Created by Hathibelagal on 7/10/16.
- */
-public class ChatMessage extends Activity {
+public class ChatMessage  {
 
     private String messageText;
     private String messageUser;

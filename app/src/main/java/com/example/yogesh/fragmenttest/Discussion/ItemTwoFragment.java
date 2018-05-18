@@ -48,14 +48,14 @@ public class ItemTwoFragment extends Fragment  {
 
 
         simpleList = (GridView)  v.findViewById(R.id.simpleGridView);
-        animalList.add(new Item("Lion",R.drawable.ic_home_black_24dp));
-        animalList.add(new Item("Tiger",R.drawable.ic_dashboard_black_24dp));
-        animalList.add(new Item("Monkey",R.drawable.ic_dashboard_black_24dp));
-        animalList.add(new Item("Elephant",R.drawable.ic_dashboard_black_24dp));
-        animalList.add(new Item("Dog",R.drawable.ic_dashboard_black_24dp));
-        animalList.add(new Item("Cat",R.drawable.ic_dashboard_black_24dp));
+        animalList.add(new Item("Computer ",R.drawable.ic_workspace));
+        animalList.add(new Item("Civil",R.drawable.ic_excavator));
+        animalList.add(new Item("Electrical",R.drawable.ic_lightbulb));
+        animalList.add(new Item("Chemical",R.drawable.ic_dropper));
+        animalList.add(new Item("Electronic",R.drawable.ic_tablet));
+        animalList.add(new Item("Mechanical",R.drawable.ic_wrench));
 
-        CustomAdapter myAdapter=new CustomAdapter(getContext(),R.layout.fragmenthomegrid,animalList);
+        CustomAdapter myAdapter=new CustomAdapter(getContext(),R.layout.fragmentgridview    ,animalList);
         simpleList.setAdapter(myAdapter);
 
 

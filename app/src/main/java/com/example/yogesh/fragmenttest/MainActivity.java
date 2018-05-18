@@ -1,6 +1,7 @@
 package com.example.yogesh.fragmenttest;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -35,7 +36,12 @@ public class MainActivity extends AppCompatActivity {
                                 selectedFragment = ItemTwoFragment.newInstance();
                                 break;
                             case R.id.navigation_notifications:
-                                selectedFragment = ItemThreeFragment.newInstance();
+                                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.example.yogesh.notification");
+                                if (launchIntent != null) {
+                                   startActivity(launchIntent);//null pointer check in case package name was not found
+                        }
+
+                               // selectedFragment = ItemThreeFragment.newInstance();
                                 break;
                         }
                         FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -47,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Manually displaying the first fragment - one time only
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.content, ItemOneFragment.newInstance());
+        transaction.replace(R.id.content, ItemTwoFragment.newInstance());
         transaction.commit();
 
         //Used to select an item programmatically
